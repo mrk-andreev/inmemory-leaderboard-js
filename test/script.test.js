@@ -14,3 +14,22 @@ test('Should complete e2e test', () => {
     expect(leaderboard.sumTop(3)).toBe(141);           // returns 141 = 51 + 51 + 39;
 });
 
+test('Should throw exception on negative score', () => {
+    const leaderboard = new Leaderboard();
+
+    expect(() => leaderboard.addScore(1, -1)).toThrow(/Score must be non-negative/);
+});
+
+test('Should return zero if sumTop zero', () => {
+    const leaderboard = new Leaderboard();
+
+    expect(leaderboard.sumTop(0)).toBe(0);
+});
+
+
+test('Should throw exception on negative k for sumTop', () => {
+    const leaderboard = new Leaderboard();
+
+    expect(() => leaderboard.sumTop(-5)).toThrow(/K must be non-negative/);
+});
+

@@ -9,6 +9,10 @@ const Leaderboard = function () {
  * @return {void}
  */
 Leaderboard.prototype.addScore = function (playerId, score) {
+  if (score < 0) {
+    throw new Error("Score must be non-negative");
+  }
+
   if (this.map.has(playerId)) {
     const val = this.map.get(playerId);
     score = val + score;
@@ -23,6 +27,10 @@ Leaderboard.prototype.addScore = function (playerId, score) {
  * @return {number}
  */
 Leaderboard.prototype.sumTop = function (k) {
+  if (k < 0) {
+    throw new Error("K must be non-negative");
+  }
+
   const arr = Array.from(this.map.values()).sort((a, b) => b - a);
 
   let sum = 0;
