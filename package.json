@@ -1,0 +1,41 @@
+{
+  "name": "inmemory-leaderboard-js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mrk-andreev/inmemory-leaderboard-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrk-andreev/inmemory-leaderboard-js.git"
+  },
+  "description": "InMemory implementation of '1244. Design A Leaderboard' leetcode problem.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "fmt": "prettier src/ --write",
+    "lint": "eslint ./src/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0",
+    "prettier": "~3.2.5"
+  },
+  "author": "Mark Andreev",
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Mark Andreev",
+      "email": "mark.andreev@gmail.com",
+      "url": "https://www.linkedin.com/in/mark-andreev-75a753134/"
+    }
+  ],
+  "publishConfig": {
+    "ignore": [
+      ".idea/*",
+      "!dist/*",
+      ".github/workflows"
+    ]
+  }
+}
